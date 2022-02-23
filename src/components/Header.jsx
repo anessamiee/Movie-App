@@ -10,14 +10,14 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function Header(props) {
-  const [input, setInput] = useState();
+  const [input, setInput] = useState({ search: "" });
   const [searchDone, setSearchDone] = useState(false);
 
   useEffect(() => {
     if (searchDone) {
       navigate("/Search-Results");
     }
-  }, [searchDone,input]);
+  }, [searchDone, input]);
   let navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -32,8 +32,6 @@ export default function Header(props) {
           var temp = respone.data.data;
           props.setResult(temp);
           setSearchDone(true);
-          console.log(input.search);
-          console.log(respone.data.data);
         });
   };
   const handleChange = (e) => {
