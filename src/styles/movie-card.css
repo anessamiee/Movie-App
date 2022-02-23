@@ -1,0 +1,56 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: ease-in-out 0.3s;
+  filter: grayscale(30%);
+  align-self: baseline;
+}
+.card:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+.title {
+  margin-top: 10px;
+  color: grey;
+  font-size: 2.5vh;
+  transition: ease-in-out 0.3s;
+  overflow: hidden;
+  display: inline-block;
+  white-space: pre-wrap;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  text-align: center;
+}
+.card:hover .title {
+  color: lightgray;
+}
+@media screen and (max-width: 601px) {
+  .card Poster {
+    width: 40vh;
+    height: 60vh;
+  }
+}
+
+.list-card {
+  border-bottom: 0.5px solid grey;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  transition: ease-in-out .3s;
+}
+.list-card:hover {
+  color: white;
+  border-bottom: 0.5px solid var(--red);
+}
+.list-card:hover > .list-text{
+  color: white;
+}
+.list-card .poster-con {
+ display: none;
+}
+.list-text { cursor: default;
+  color: grey;
+  font-size: 1.5rem;
+  transition: ease-in-out .3s;
+}

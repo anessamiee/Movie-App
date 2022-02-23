@@ -1,0 +1,119 @@
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+
+  /* position: fixed;
+  z-index: 1;
+  background: blur(65px);
+  backdrop-filter: blur(100px);
+  background-color: rgba(0,0,0, 0.1); */
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons a {
+  flex: 1;
+  color: var(--red);
+  font-size: 5vh;
+  margin: 0 30px;
+  text-decoration: none;
+  padding-bottom: 8px;
+  opacity: 0.5;
+  transition: ease-in-out 0.3s;
+  text-align: center;
+  background: linear-gradient(var(--red), var(--red)) bottom / 0% 3px no-repeat;
+}
+.buttons a:hover {
+  opacity: 1;
+}
+.buttons a:focus {
+  opacity: 1;
+  background-size: 100% 3px;
+}
+.buttons a:active {
+  opacity: 1;
+  background-size: 100% 3px;
+}
+.btn-focused {
+  opacity: 1;
+  background-size: 100% 3px;
+}
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-box,
+.submit-search {
+  font-size: 3vh;
+  color: grey;
+  padding: 0;
+  background-color: transparent;
+  border-style: none;
+  outline: none;
+  padding: 10px 40px;
+  border-bottom: solid;
+  border-color: grey;
+  transition: ease-in-out 0.3s;
+}
+.search-box {
+  padding-left: 0;
+}
+
+.submit-search {
+  padding-right: 0;
+  transition: ease-in-out 0.3s;
+}
+.search-box:focus {
+  color: var(--light-grey);
+  border-color: var(--red);
+}
+.search-box:focus + .submit-search {
+  border-color: var(--red);
+}
+.search-box:focus + .submit-search:hover {
+  color: var(--red);
+}
+.search-box:focus + .submit-search:focus {
+  color: var(--red);
+}
+.search-box::placeholder {
+  transition: ease-in-out 0.1s;
+}
+.search-box:focus::placeholder {
+  color: transparent;
+}
+
+@media screen and (min-width: 600px) {
+  .footer {
+    display: none;
+  }
+}
+@media screen and (max-width: 601px) {
+  .footer {
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--dark);
+    padding: 20px 0 10px;
+    z-index: 1;
+  }
+  .search-box,
+  .submit-search {
+    font-size: 5.5vw;
+  }
+  .header .buttons {
+    display: none;
+  }
+}
