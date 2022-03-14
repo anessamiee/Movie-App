@@ -45,6 +45,7 @@ function App() {
         setMovies(temp);
       });
   };
+  const colors = ["orange", "red", "blue"];
 
   return (
     <div className="App">
